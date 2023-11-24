@@ -14,11 +14,12 @@ document.getElementById('cadastroForm').addEventListener('submit', async functio
     }
   
     // Captura dos parâmetros de URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const source = urlParams.get('source');
-    const campaign = urlParams.get('campaign');
-  
-    console.log('Parâmetros de URL - Source:', source, 'Campaign:', campaign);
+const urlParams = new URLSearchParams(window.location.search);
+const source = urlParams.get('source') || '';  // Padrão para uma string vazia se for nulo
+const campaign = urlParams.get('campaign') || '';  // Padrão para uma string vazia se for nulo
+
+console.log('Parâmetros de URL - Source:', source, 'Campaign:', campaign);
+
   
     try {
       // Chamada de API para o ActiveCampaign usando caminho relativo
