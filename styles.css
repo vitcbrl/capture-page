@@ -95,3 +95,33 @@ button:hover {
 #agradecimento {
   display: none;
 }
+
+/* Estilos para telas menores (dispositivos móveis) */
+@media only screen and (max-width: 600px) {
+  body {
+    display: block; /* Volta ao padrão de bloco */
+    overflow-y: auto; /* Adiciona rolagem vertical */
+  }
+
+  .conteudo {
+    flex-direction: column; /* Altera a direção do flex container para coluna */
+  }
+
+  .lado-esquerdo,
+  .lado-direito {
+    flex: none; /* Remove a flexibilidade para que cada lado tenha largura total */
+    margin: 0; /* Remove as margens laterais */
+  }
+
+  .lado-esquerdo {
+    order: 1; /* Agora o lado esquerdo vem antes no fluxo */
+  }
+
+  .lado-direito {
+    order: 2; /* Agora o lado direito vem depois no fluxo */
+  }
+
+  .barra {
+    display: none; /* Oculta a barra em telas menores */
+  }
+}
