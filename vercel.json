@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://cassianosavio.api-us1.com/api/:path*"
+    }
+  ]
+}
