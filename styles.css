@@ -1,13 +1,13 @@
 body {
   font-family: 'Work Sans', sans-serif;
-  font-weight: 300; /* Light */
+  font-weight: 300;
   margin: 0;
   padding: 0;
   background: linear-gradient(269deg, #1B4B5B 10%, #192B33 100%);
   display: flex;
-  justify-content: center; /* Centraliza os elementos horizontalmente */
-  align-items: center; /* Centraliza os elementos verticalmente */
-  height: 100vh; /* Define a altura da tela como 100% da viewport height */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .container {
@@ -19,16 +19,16 @@ body {
 .barra {
   height: 50px;
   background-size: contain;
-  margin: 0 auto; /* Centraliza a barra horizontalmente */
+  margin: 0 auto;
 }
 
 .conteudo {
   display: flex;
-  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  justify-content: center;
 }
 
 .lado-esquerdo {
-  flex: 2; /* Ajusta a largura para ocupar 2/4 ou 50% da tela */
+  flex: 2;
   padding: 20px;
   text-align: left;
   margin-right: 20px;
@@ -75,7 +75,7 @@ button:hover {
 }
 
 .lado-direito {
-  flex: 2; /* Ajusta a largura para ocupar 2/4 ou 50% da tela */
+  flex: 2;
   padding: 20px;
   margin-left: 20px;
   color: aliceblue;
@@ -87,44 +87,37 @@ button:hover {
   color: #fff;
 }
 
-.mensagem {
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 300;
-  color: #fff;
-  margin-top: 20px;
-}
-
 #agradecimento {
   display: none;
   color: aliceblue;
 }
 
-/* Estilos para telas menores (dispositivos móveis) */
 @media only screen and (max-width: 600px) {
   body {
-    display: block; /* Volta ao padrão de bloco */
-    overflow-y: auto; /* Adiciona rolagem vertical */
+    display: block;
+    overflow-y: auto;
   }
 
   .conteudo {
-    flex-direction: column; /* Altera a direção do flex container para coluna */
+    flex-direction: column;
   }
 
   .lado-esquerdo,
   .lado-direito {
-    flex: none; /* Remove a flexibilidade para que cada lado tenha largura total */
-    margin: 0; /* Remove as margens laterais */
+    flex: none;
+    margin: 0;
   }
 
   .lado-esquerdo {
-    order: 1; /* Agora o lado esquerdo vem antes no fluxo */
+    order: 1;
   }
 
   .lado-direito {
-    order: 2; /* Agora o lado direito vem depois no fluxo */
+    order: 2;
   }
 
   .barra {
-    display: none; /* Oculta a barra em telas menores */
+    display: none;
   }
 }
+
