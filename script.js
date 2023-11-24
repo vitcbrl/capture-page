@@ -33,8 +33,8 @@ document.getElementById('cadastroForm').addEventListener('submit', async functio
                       whatsapp: whatsapp,
                   },
               },
-              tags: ['INTERESSADOS MDNEGOCIOS'],
-              lists: ['INTERESSADOS MDNEGOCIOS'],
+              tags: ['INTERESSADOS MDNEGOCIOS'], // Include tags array here
+              lists: ['INTERESSADOS MDNEGOCIOS'], // Include lists array here
               source: source,
               campaign: campaign,
           }),
