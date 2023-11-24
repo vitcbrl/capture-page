@@ -1,13 +1,8 @@
 {
-  "version": 2,
-  "routes": [
+  "rewrites": [
     {
-      "src": "/api/3/contacts",
-      "dest": "https://cassianosavio.api-us1.com/api/3/contacts"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/api/:path*",
+      "destination": "https://cassianosavio.api-us1.com/api/:path*"
     }
   ]
 }
