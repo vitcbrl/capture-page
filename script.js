@@ -39,7 +39,7 @@ document.getElementById('cadastroForm').addEventListener('submit', async functio
                   },
               },
               tags: ['INTERESSADOS MDNEGOCIOS'],
-              lists: ['INTERESSADOS MDNEGOCIOS'],
+              lists: [31],
               source: source,
               campaign: campaign,
               utm: {
