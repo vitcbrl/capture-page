@@ -78,6 +78,7 @@ button:hover {
   flex: 2; /* Ajusta a largura para ocupar 2/4 ou 50% da tela */
   padding: 20px;
   margin-left: 20px;
+  color: aliceblue;
 }
 
 .copy-direita {
@@ -95,6 +96,7 @@ button:hover {
 
 #agradecimento {
   display: none;
+  color: aliceblue;
 }
 
 /* Estilos para telas menores (dispositivos móveis) */
