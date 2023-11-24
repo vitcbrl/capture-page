@@ -22,7 +22,7 @@ document.getElementById('cadastroForm').addEventListener('submit', async functio
   const utmSource = urlParams.get('utm_source') || '';
 
   try {
-      const response = await fetch('/api/3/contacts', {
+      const response = await fetch('/api/3/contact/sync', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',
