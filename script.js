@@ -27,14 +27,14 @@ document.getElementById('cadastroForm').addEventListener('submit', async functio
               contact: {
                   email: email,
                   firstName: nome,
+                  phone: whatsapp, // Alterado para 'phone'
                   field: {
                       vagas: vagas,
                       conteudos: conteudos,
-                      whatsapp: whatsapp,
                   },
               },
-              tags: ['INTERESSADOS MDNEGOCIOS'], // Include tags array here
-              lists: ['INTERESSADOS MDNEGOCIOS'], // Include lists array here
+              tags: ['INTERESSADOS MDNEGOCIOS'],
+              lists: ['INTERESSADOS MDNEGOCIOS'],
               source: source,
               campaign: campaign,
           }),
