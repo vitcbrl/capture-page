@@ -22,7 +22,7 @@ document.getElementById('cadastroForm').addEventListener('submit', async functio
   const utmSource = urlParams.get('utm_source') || '';
 
   try {
-      const response = await fetch('/api/3/contact/sync', {
+      const response = await fetch('/api/3/contacts', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',
@@ -55,6 +55,7 @@ document.getElementById('cadastroForm').addEventListener('submit', async functio
       const data = await response.json();
 
       console.log('Contato adicionado com sucesso:', data);
+      console.log(data.id)
       document.getElementById('agradecimento').innerText = `Obrigado por se cadastrar, ${nome}! Verifique seu e-mail para confirmação.`;
       document.getElementById('agradecimento').style.display = 'block';
       document.getElementById('cadastroForm').style.display = 'none';
