@@ -1,0 +1,94 @@
+body {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300; /* Light */
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(269deg, #1B4B5B 10%, #192B33 100%);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 50px auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.barra {
+  /* background: url('img/traço.png') no-repeat center; Remova esta linha */
+  height: 50px;
+  background-size: contain;
+}
+
+.conteudo {
+  display: flex;
+}
+
+.lado-esquerdo {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+  margin-right: 20px; /* Adicionei margem à direita para mover mais para a esquerda */
+  border-right: 1px solid #fff; /* Adicione esta linha para o traço vertical */
+  display: flex;
+  flex-direction: column; /* Altere para column para alinhar a logo e a frase verticalmente */
+  align-items: center; /* Centraliza verticalmente os itens */
+}
+
+.logo {
+  max-width: 280px; /* Ajuste o tamanho da logo conforme necessário */
+  margin-bottom: 20px; /* Adicione um espaço abaixo da logo */
+}
+
+.copy {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  color: #fff;
+}
+
+form {
+  width: 100%;
+  margin-top: auto; /* Adicione esta linha para alinhar o formulário com a parte inferior do lado esquerdo */
+}
+
+label,
+input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.lado-direito {
+  flex: 1;
+  padding: 20px;
+  margin-left: 20px;
+}
+
+.copy-direita {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  color: #fff;
+}
+
+.mensagem {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  color: #fff;
+  margin-top: 20px; /* Adicione um espaçamento entre a frase e a logo */
+}
+
+#agradecimento {
+  display: none;
+}
