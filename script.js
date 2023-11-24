@@ -53,6 +53,18 @@ document.getElementById('cadastroForm').addEventListener('submit', async functio
       });
 
       const data = await response.json();
+      const options = {
+        method: 'POST',
+        headers: {accept: 'application/json', 'content-type': 'application/json'},
+        body: JSON.stringify({contactList: {sourceid: 0, list: 31, contact: data.contact.id , status: 1}})
+      };
+      
+      fetch('/api/3/contactLists', options)
+        .then(response => response.json())
+        .then(response => console.log(response))
+        .catch(err => console.error(err));
+
+      
 
       console.log('Contato adicionado com sucesso:', data);
       console.log(data.contact.id)
