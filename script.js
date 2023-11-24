@@ -38,8 +38,6 @@ document.getElementById('cadastroForm').addEventListener('submit', async functio
                       conteudos: conteudos,
                   },
               },
-              tags: ['INTERESSADOS MDNEGOCIOS'],
-              lists: [31],
               source: source,
               campaign: campaign,
               utm: {
@@ -60,7 +58,7 @@ document.getElementById('cadastroForm').addEventListener('submit', async functio
         body: JSON.stringify({contactList: {sourceid: 0, list: 31, contact: data.contact.id , status: 1}})
       };
       
-      fetch('/api/3/contactLists', options)
+      const response2 = await fetch('/api/3/contactLists', options)
         .then(response => response.json())
         .then(response => console.log(response))
         .catch(err => console.error(err));
