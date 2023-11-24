@@ -6,6 +6,8 @@ document.getElementById('cadastroForm').addEventListener('submit', async functio
     const email = document.getElementById('email').value;
     const vagas = document.getElementById('vagas').checked;
     const conteudos = document.getElementById('conteudos').checked;
+
+    console.log('Dados do formulário - Nome:', nome, 'Email:', email, 'Vagas:', vagas, 'Conteúdos:', conteudos);
   
     // Verifica se pelo menos uma opção foi marcada
     if (!vagas && !conteudos) {
