@@ -1,8 +1,12 @@
 {
-  "rewrites": [
+  "version": 2,
+  "routes": [
     {
-      "source": "/api/:path*",
-      "destination": "https://cassianosavio.api-us1.com/api/:path*"
+      "handle": "cors"
+    },
+    {
+      "src": "/api/:path*",
+      "dest": "https://cassianosavio.api-us1.com/api/:path*"
     }
   ]
 }
