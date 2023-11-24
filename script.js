@@ -15,6 +15,11 @@ document.getElementById('cadastroForm').addEventListener('submit', async functio
   const urlParams = new URLSearchParams(window.location.search);
   const source = urlParams.get('source') || '';
   const campaign = urlParams.get('campaign') || '';
+  const utmTerm = urlParams.get('utm_term') || '';
+  const utmCampaign = urlParams.get('utm_campaign') || '';
+  const utmMedium = urlParams.get('utm_medium') || '';
+  const utmContent = urlParams.get('utm_content') || '';
+  const utmSource = urlParams.get('utm_source') || '';
 
   try {
       const response = await fetch('/api/3/contacts', {
@@ -27,7 +32,7 @@ document.getElementById('cadastroForm').addEventListener('submit', async functio
               contact: {
                   email: email,
                   firstName: nome,
-                  phone: whatsapp, // Alterado para 'phone'
+                  phone: whatsapp,
                   field: {
                       vagas: vagas,
                       conteudos: conteudos,
@@ -37,6 +42,13 @@ document.getElementById('cadastroForm').addEventListener('submit', async functio
               lists: ['INTERESSADOS MDNEGOCIOS'],
               source: source,
               campaign: campaign,
+              utm: {
+                  utmTerm: utmTerm,
+                  utmCampaign: utmCampaign,
+                  utmMedium: utmMedium,
+                  utmContent: utmContent,
+                  utmSource: utmSource,
+              },
           }),
       });
 
