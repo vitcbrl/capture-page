@@ -12,6 +12,8 @@ document.getElementById('cadastroForm').addEventListener('submit', function(even
   const source = urlParams.get('source');
   const campaign = urlParams.get('campaign');
 
+  console.log('Parâmetros de URL - Source:', source, 'Campaign:', campaign);
+
   // Chamada de API para o ActiveCampaign
   fetch('https://cassianosavio.api-us1.com/api/3/contacts', {
       method: 'POST',
