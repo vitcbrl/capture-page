@@ -24,10 +24,11 @@ body {
 
 .conteudo {
   display: flex;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
 }
 
 .lado-esquerdo {
-  flex: 1;
+  flex: 2; /* Ajusta a largura para ocupar 2/4 ou 50% da tela */
   padding: 20px;
   text-align: left;
   margin-right: 20px;
@@ -74,7 +75,7 @@ button:hover {
 }
 
 .lado-direito {
-  flex: 1;
+  flex: 2; /* Ajusta a largura para ocupar 2/4 ou 50% da tela */
   padding: 20px;
   margin-left: 20px;
 }
