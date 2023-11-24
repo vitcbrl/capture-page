@@ -55,7 +55,8 @@ document.getElementById('cadastroForm').addEventListener('submit', async functio
       const data = await response.json();
       const options = {
         method: 'POST',
-        headers: {accept: 'application/json', 'content-type': 'application/json'},
+        headers: {accept: 'application/json', 'content-type': 'application/json',
+        'Api-Token': '30eef11cca1642e6a07bedcd5f6edf65c21065cb6f2dabecda139d4290e05225a99ee7e3'},
         body: JSON.stringify({contactList: {sourceid: 0, list: 31, contact: data.contact.id , status: 1}})
       };
       
