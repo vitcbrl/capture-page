@@ -51,6 +51,8 @@ document.getElementById('cadastroForm').addEventListener('submit', async functio
       document.getElementById('agradecimento').innerText = `Obrigado por se cadastrar, ${nome}! Verifique seu e-mail para confirmação.`;
       document.getElementById('agradecimento').style.display = 'block';
       document.getElementById('cadastroForm').style.display = 'none';
+      // Ocultar a frase "Cadastre-se na lista de espera e seja informado quando abrirmos vagas."
+  document.querySelector('.copy-direita').style.display = 'none';
     } catch (error) {
       console.error('Erro ao adicionar contato:', error);
     }
