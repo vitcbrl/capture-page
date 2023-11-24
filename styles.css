@@ -4,19 +4,22 @@ body {
   margin: 0;
   padding: 0;
   background: linear-gradient(269deg, #1B4B5B 10%, #192B33 100%);
+  display: flex;
+  justify-content: center; /* Centraliza os elementos horizontalmente */
+  align-items: center; /* Centraliza os elementos verticalmente */
+  height: 100vh; /* Define a altura da tela como 100% da viewport height */
 }
 
 .container {
   max-width: 1000px;
-  margin: 50px auto;
   border-radius: 8px;
   overflow: hidden;
 }
 
 .barra {
-  /* background: url('img/traço.png') no-repeat center; Remova esta linha */
   height: 50px;
   background-size: contain;
+  margin: 0 auto; /* Centraliza a barra horizontalmente */
 }
 
 .conteudo {
@@ -27,16 +30,16 @@ body {
   flex: 1;
   padding: 20px;
   text-align: left;
-  margin-right: 20px; /* Adicionei margem à direita para mover mais para a esquerda */
-  border-right: 1px solid #fff; /* Adicione esta linha para o traço vertical */
+  margin-right: 20px;
+  border-right: 1px solid #fff;
   display: flex;
-  flex-direction: column; /* Altere para column para alinhar a logo e a frase verticalmente */
-  align-items: center; /* Centraliza verticalmente os itens */
+  flex-direction: column;
+  align-items: center;
 }
 
 .logo {
-  max-width: 280px; /* Ajuste o tamanho da logo conforme necessário */
-  margin-bottom: 20px; /* Adicione um espaço abaixo da logo */
+  max-width: 280px;
+  margin-bottom: 20px;
 }
 
 .copy {
@@ -47,7 +50,7 @@ body {
 
 form {
   width: 100%;
-  margin-top: auto; /* Adicione esta linha para alinhar o formulário com a parte inferior do lado esquerdo */
+  margin-top: auto;
 }
 
 label,
@@ -86,7 +89,7 @@ button:hover {
   font-family: 'Work Sans', sans-serif;
   font-weight: 300;
   color: #fff;
-  margin-top: 20px; /* Adicione um espaçamento entre a frase e a logo */
+  margin-top: 20px;
 }
 
 #agradecimento {
