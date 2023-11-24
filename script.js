@@ -55,7 +55,7 @@ document.getElementById('cadastroForm').addEventListener('submit', async functio
       const data = await response.json();
 
       console.log('Contato adicionado com sucesso:', data);
-      console.log(data.id)
+      console.log(data.contact.id)
       document.getElementById('agradecimento').innerText = `Obrigado por se cadastrar, ${nome}! Verifique seu e-mail para confirmação.`;
       document.getElementById('agradecimento').style.display = 'block';
       document.getElementById('cadastroForm').style.display = 'none';
