@@ -22,6 +22,10 @@ body {
   margin: 0 auto;
 }
 
+.conteudo-esquerdo{
+  margin-top: 39px; /* Adicione esta linha para ajustar a margem superior */
+}
+
 .conteudo {
   display: flex;
   justify-content: center;
