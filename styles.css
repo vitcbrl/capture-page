@@ -96,6 +96,18 @@ button:hover {
   color: aliceblue;
 }
 
+._form-content {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+._form-thank-you {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+
 @media only screen and (max-width: 600px) {
   body {
     display: block;

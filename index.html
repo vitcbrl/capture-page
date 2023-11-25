@@ -138,7 +138,6 @@
                   </a>
                 </div>
               </form>
-                <p id="agradecimento" style="display:none;">Obrigado por se cadastrar, {nome}! Verifique seu e-mail para confirmação.</p>
             </div>
         </div>
     </div>
@@ -147,22 +146,43 @@
     <script type="text/javascript">
         
         window.cfields = {"17":"utm_term","19":"utm_medium","20":"utm_content","22":"utm_source","18":"utm_campaign"};
-        window._show_thank_you = function(id, message, trackcmp_url, email) {
-            var form = document.getElementById('_form_' + id + '_'), thank_you = form.querySelector('._form-thank-you');
-            form.querySelector('._form-content').style.display = 'none';
-            thank_you.innerHTML = message;
-            thank_you.style.display = 'block';
-            const vgoAlias = typeof visitorGlobalObjectAlias === 'undefined' ? 'vgo' : visitorGlobalObjectAlias;
-            var visitorObject = window[vgoAlias];
-            if (email && typeof visitorObject !== 'undefined') {
-                visitorObject('setEmail', email);
-                visitorObject('update');
-            } else if (typeof(trackcmp_url) != 'undefined' && trackcmp_url) {
-                // Site tracking URL to use after inline form submission.
-                _load_script(trackcmp_url);
-            }
-            if (typeof window._form_callback !== 'undefined') window._form_callback(id);
-        };
+    window._show_thank_you = function(id, message, trackcmp_url, email) {
+        var form = document.getElementById('_form_' + id + '_'),
+            thank_you = form.querySelector('._form-thank-you'),
+            form_content = form.querySelector('._form-content'),
+            reservation_text = form.querySelector('.copy-direita');
+
+        form_content.classList.add('_form-transition'); // Adiciona classe de transição
+
+        form_content.style.opacity = '0'; // Oculta o formulário
+        form_content.style.display = 'none';
+
+        if (reservation_text) {
+            reservation_text.style.display = 'none'; // Oculta a parte específica do HTML
+        }
+
+        thank_you.innerHTML = message;
+        thank_you.style.display = 'block';
+
+        // Adiciona uma pequena pausa antes de exibir o agradecimento para dar tempo à animação de ocultar o formulário
+        setTimeout(function () {
+            form_content.style.display = 'none'; // Garante que o formulário está oculto
+            thank_you.style.opacity = '1'; // Exibe o texto de agradecimento
+            thank_you.classList.add('_form-transition'); // Adiciona classe de transição
+        }, 300); // Ajuste este valor para corresponder à duração da transição CSS
+
+        const vgoAlias = typeof visitorGlobalObjectAlias === 'undefined' ? 'vgo' : visitorGlobalObjectAlias;
+        var visitorObject = window[vgoAlias];
+        if (email && typeof visitorObject !== 'undefined') {
+            visitorObject('setEmail', email);
+            visitorObject('update');
+        } else if (typeof(trackcmp_url) != 'undefined' && trackcmp_url) {
+            // Site tracking URL to use after inline form submission.
+            _load_script(trackcmp_url);
+        }
+        if (typeof window._form_callback !== 'undefined') window._form_callback(id);
+    };
+
         window._show_error = function(id, message, html) {
             var form = document.getElementById('_form_' + id + '_'),
                 err = document.createElement('div'),
