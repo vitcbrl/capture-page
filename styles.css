@@ -48,7 +48,7 @@
 
 .barra-vertical {
   width: 2px; /* A largura da barra */
-  background-color: #e40e49; /* Cor da barra */
+  background-color: white; /* Cor da barra */
   height: 80%; /* Altura da barra em relação à altura da tela */
   position: absolute;
   left: 50%;
