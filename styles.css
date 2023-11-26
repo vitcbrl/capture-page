@@ -121,8 +121,6 @@
   .body {
     display: flex;
     overflow-y: auto;
-    flex-direction: column; /* Adicionei essa propriedade para o corpo ser uma coluna em telas pequenas */
-    align-items: center; /* Centraliza o conteúdo na tela */
   }
 
   .container {
@@ -131,41 +129,17 @@
   }
 
   .lado-esquerdo {
-    flex: 2;
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     order: -1; /* Mantém o lado esquerdo acima do lado direito */
+    text-align: center;
     margin-bottom: 20px; /* Adicione um espaçamento entre os lados */
   }
-
   .lado-direito {
-    align-items: center; /* Ajusta o alinhamento ao centro */
-    flex: 2;
-    padding: 20px;
-    color: aliceblue;
+    order: 2;
   }
 
-  .barra-vertical {
-    display: none;
-  }
-
-  .reserva,
-  .logo,
-  .rodape {
-    margin-top: 20px; /* Reduzi a margem para melhor se adequar a telas menores */
-  }
-
-  .formulario {
-    width: 100%;
-    max-width: 600px; /* Ajusta a largura máxima do formulário para evitar que fique muito largo em telas pequenas */
-    margin: auto; /* Centraliza o formulário na tela */
-    padding: 20px; /* Adicionei um espaçamento interno para o formulário */
-    box-sizing: border-box; /* Garante que o padding não afete a largura total do formulário */
-  }
-
+.barra-vertical {
+  display: none;
+}
 
   
 }
