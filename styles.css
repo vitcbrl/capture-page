@@ -1,71 +1,93 @@
-body {
+.body {
   font-family: 'Work Sans', sans-serif;
   font-weight: 300;
   margin: 0;
   padding: 0;
+  max-width: 1000px;
   background: linear-gradient(269deg, #1B4B5B 10%, #192B33 100%);
   display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
 }
 
 .container {
-  max-width: 1000px;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.barra {
-  height: 50px;
-  background-size: contain;
-  margin: 0 auto;
-}
-
-.conteudo-esquerdo{
-  margin-top: 39px; /* Adicione esta linha para ajustar a margem superior */
-}
-
-.conteudo {
   display: flex;
   justify-content: center;
+  background: linear-gradient(269deg, #1B4B5B 10%, #192B33 100%);
+  position: relative;
+  height: 100vh;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .lado-esquerdo {
   flex: 2;
   padding: 20px;
-  text-align: left;
-  margin-right: 20px;
-  border-right: 1px solid #fff;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
+.reserva {
+  margin-top: 140px;
+  align-items: center;
+  color: white;
+}
 .logo {
+  align-items: center;
+  margin-top: 30px;
   max-width: 280px;
   margin-bottom: 20px;
 }
+.rodape {
+  margin-top: 60px;
+  align-items: center;
+  color: white;
+  font-size: large;
+}
 
-.copy {
+.barra-vertical {
+  width: 2px; /* A largura da barra */
+  background-color: #e40e49; /* Cor da barra */
+  height: 80%; /* Altura da barra em relação à altura da tela */
+  position: absolute;
+  left: 50%;
+  top: 10%; /* Ajuste conforme necessário para centralizar verticalmente */
+  transform: translateX(-50%);
+}
+
+.lado-direito {
+  align-items: right;
+  flex: 2;
+  padding: 20px;
+  color: aliceblue;
+}
+
+.copy-direita {
+  align-items: end;
+  text-align: center;
+  margin-top: 100px;
   font-family: 'Work Sans', sans-serif;
   font-weight: 300;
   color: #fff;
 }
 
-form {
+.formulario {
+  align-items: end;
+}
+
+.form {
   width: 100%;
   margin-top: auto;
 }
 
-label,
-input {
+.label,
+.input {
   display: block;
   width: 100%;
   margin-bottom: 10px;
 }
 
-button {
+.button {
   background-color: #4caf50;
   color: #fff;
   padding: 10px 15px;
@@ -74,21 +96,8 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.button:hover {
   background-color: #45a049;
-}
-
-.lado-direito {
-  flex: 2;
-  padding: 20px;
-  margin-left: 20px;
-  color: aliceblue;
-}
-
-.copy-direita {
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 300;
-  color: #fff;
 }
 
 #agradecimento {
@@ -109,46 +118,58 @@ button:hover {
 
 
 @media only screen and (max-width: 600px) {
-  body {
-    display: block;
+  .body {
+    display: flex;
     overflow-y: auto;
+    flex-direction: column; /* Adicionei essa propriedade para o corpo ser uma coluna em telas pequenas */
+    align-items: center; /* Centraliza o conteúdo na tela */
   }
 
-  .conteudo {
-    flex-direction: column;
-  }
-
-  .lado-esquerdo,
-  .lado-direito {
-    flex: none;
-    margin: 0;
-  }
-
-  .lado-esquerdo {
-    order: 1;
-  }
-
-  .lado-direito {
-    order: 2;
-  }
-
-  .barra {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .conteudo {
+  .container {
     flex-direction: column;
     align-items: center;
   }
 
   .lado-esquerdo {
-    order: -1; /* Mantém o lado esquerdo acima do lado direito */
+    flex: 2;
+    padding: 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: -1; /* Mantém o lado esquerdo acima do lado direito */
     margin-bottom: 20px; /* Adicione um espaçamento entre os lados */
   }
+
+  .lado-direito {
+    align-items: center; /* Ajusta o alinhamento ao centro */
+    flex: 2;
+    padding: 20px;
+    color: aliceblue;
+  }
+
+  .barra-vertical {
+    display: none;
+  }
+
+  .reserva,
+  .logo,
+  .rodape {
+    margin-top: 20px; /* Reduzi a margem para melhor se adequar a telas menores */
+  }
+
+  .formulario {
+    width: 100%;
+    max-width: 600px; /* Ajusta a largura máxima do formulário para evitar que fique muito largo em telas pequenas */
+    margin: auto; /* Centraliza o formulário na tela */
+    padding: 20px; /* Adicionei um espaçamento interno para o formulário */
+    box-sizing: border-box; /* Garante que o padding não afete a largura total do formulário */
+  }
+
+
+  
 }
+
 
 /* Adicionado CSS para o formulário */
 @import url(https://fonts.bunny.net/css?family=ibm-plex-sans:400,600);
