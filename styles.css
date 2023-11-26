@@ -22,6 +22,7 @@
 .lado-esquerdo {
   flex: 2;
   padding: 20px;
+  float: left;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -58,6 +59,7 @@
 .lado-direito {
   align-items: right;
   flex: 2;
+  float: right;
   padding: 20px;
   color: aliceblue;
 }
@@ -117,30 +119,17 @@
 }
 
 
-@media only screen and (max-width: 600px) {
-  .body {
-    display: flex;
+@media  (max-width: 600px) {
+  .container {
+    display: block;
+    width: auto;
     overflow-y: auto;
   }
 
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .lado-esquerdo {
-    order: -1; /* Mantém o lado esquerdo acima do lado direito */
-    text-align: center;
-    margin-bottom: 20px; /* Adicione um espaçamento entre os lados */
-  }
-  .lado-direito {
-    order: 2;
-  }
 
 .barra-vertical {
   display: none;
 }
-
   
 }
 
