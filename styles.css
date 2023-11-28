@@ -47,6 +47,11 @@
   font-size: large;
 }
 
+/* Estilos para desktop (ou telas maiores que md) */
+.seta-mobile {
+  display: none;
+}
+
 .barra-vertical {
   width: 2px; /* A largura da barra */
   background-color: white; /* Cor da barra */
@@ -132,6 +137,20 @@
   display: none;
 }
   
+/* Estilos para dispositivos móveis (telas md e menores) */
+@media (max-width: 768px) {
+  .seta-mobile {
+      display: block;
+  }
+
+  .seta-mobile img {
+    width: 65%;
+    height: 65%;
+    object-fit: contain; /* Para garantir que a imagem seja exibida corretamente */
+}
+
+}
+
 }
 
 
