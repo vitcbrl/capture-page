@@ -47,11 +47,6 @@
   font-size: large;
 }
 
-/* Estilos para desktop (ou telas maiores que md) */
-.seta-mobile {
-  display: none;
-}
-
 .barra-vertical {
   width: 2px; /* A largura da barra */
   background-color: white; /* Cor da barra */
@@ -126,29 +121,40 @@
 
 
 @media  (max-width: 600px) {
+  
+  
   .container {
     display: block;
     width: auto;
-    overflow-y: auto;
+    height: auto;
   }
-
 
 .barra-vertical {
   display: none;
 }
-  
-/* Estilos para dispositivos móveis (telas md e menores) */
-@media (max-width: 768px) {
-  .seta-mobile {
-      display: block;
-  }
-
-  .seta-mobile img {
-    width: 65%;
-    height: 65%;
-    object-fit: contain; /* Para garantir que a imagem seja exibida corretamente */
+.reserva {
+  margin-top: 10px;
+  font-size: medium;
+}  
+.logo{
+  margin-top: 5px;
+}
+.rodape{
+  margin-top: 0px;
+}
+.copy-direita{
+  margin-top: 0px;
+}
+.lado-esquerdo{
+  margin-bottom: 0px;
 }
 
+.lado-direito{
+  margin-top: 0px;
+  font-size: small;
+}
+.formulario{
+  margin-top: 0px;
 }
 
 }
