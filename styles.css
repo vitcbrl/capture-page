@@ -141,20 +141,26 @@
 }
 .rodape{
   margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0%;
+  font-size: large;
 }
 .copy-direita{
   margin-top: 0px;
 }
 .lado-esquerdo{
   margin-bottom: 0px;
+  padding-bottom: 0%;
 }
 
 .lado-direito{
   margin-top: 0px;
   font-size: small;
+  padding-top: 0%;
 }
 .formulario{
   margin-top: 0px;
+  padding-top: 0%;
 }
 
 }
