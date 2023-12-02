@@ -81,6 +81,7 @@
 
 .formulario {
   align-items: end;
+  
 }
 
 .form {
@@ -124,6 +125,16 @@
   transition: opacity 0.3s ease-in-out;
 }
 
+.termos {
+  position: absolute;
+  bottom: 5px; /* Ajuste conforme necessário para posicionar verticalmente */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+  color: white;
+  
+}
 
 @media  (max-width: 600px) {
   
@@ -169,8 +180,11 @@
 .formulario{
   margin-top: 0px;
   padding-top: 0%;
+  
 }
-
+.termos{
+  position: relative;
+}
 }
 
 
