@@ -62,6 +62,21 @@
   transform: translateX(-50%);
 }
 
+.termos {
+  position: absolute;
+  bottom: 5px; /* Ajuste conforme necessário para posicionar verticalmente */
+  left: 49%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+  color: white;
+}
+
+.termos strong {
+  margin-left: 10px; /* Ajuste conforme necessário para adicionar espaço entre a parte inicial e o "•" */
+}
+
+
 .lado-direito {
   align-items: right;
   flex: 2;
@@ -175,7 +190,6 @@
 }
 
 }
-
 
 /* Adicionado CSS para o formulário */
 @import url(https://fonts.bunny.net/css?family=ibm-plex-sans:400,600);
