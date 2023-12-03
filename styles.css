@@ -126,15 +126,14 @@
 }
 
 .termos {
-  position: absolute;
-  bottom: 5px; /* Ajuste conforme necessário para posicionar verticalmente */
+  padding: 85px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
   width: 100%;
   color: white;
-  
 }
+
 
 @media  (max-width: 600px) {
   
@@ -184,6 +183,8 @@
 }
 .termos{
   position: relative;
+  display: block;
+  padding: 40px;
 }
 }
 
