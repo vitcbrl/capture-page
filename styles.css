@@ -64,7 +64,7 @@
 
 .termos {
   position: absolute;
-  bottom: 5px; /* Ajuste conforme necessário para posicionar verticalmente */
+  bottom: -10px; /* Ajuste conforme necessário para posicionar verticalmente */
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
