@@ -65,16 +65,13 @@
 .termos {
   position: absolute;
   bottom: 5px; /* Ajuste conforme necessário para posicionar verticalmente */
-  left: 49%;
+  left: 50%;
   transform: translateX(-50%);
   text-align: center;
   width: 100%;
   color: white;
 }
 
-.termos strong {
-  margin-left: 10px; /* Ajuste conforme necessário para adicionar espaço entre a parte inicial e o "•" */
-}
 
 
 .lado-direito {
@@ -154,6 +151,10 @@
 .barra-vertical {
   display: none;
 }
+
+.termos{
+  position: relative;}
+
 .reserva {
   margin-top: 10px;
   font-size: medium;
